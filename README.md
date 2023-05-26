@@ -58,7 +58,9 @@ Make sure the model files (model.pkl, vectorizer.pkl, and label_encoder.pkl) are
 The application supports resume files in PDF, DOCX, and TXT formats.
 The application uses PyPDF2 and pdfplumber libraries for PDF file processing, python-docx library for DOCX file processing, and scikit-learn library for machine learning tasks.
 
-Make sure to replace `<repository_url>` with the actual URL of your repository.
+feel free to contact me 
+k.gokulappaduraikjgv@gmail.com
+phone: 9025421765
 
 
 
