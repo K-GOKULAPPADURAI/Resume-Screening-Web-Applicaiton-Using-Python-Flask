@@ -1,0 +1,7 @@
+PyPDF2
+pdfplumber
+python-docx
+scikit-learn
+sklearn
+pandas
+matplotlib

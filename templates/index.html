@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Screening</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            margin-top: 30px;
+            text-align: center;
+        }
+        input[type="file"] {
+            display: none;
+        }
+        .file-upload {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+        .file-upload:hover {
+            background-color: #45a049;
+        }
+        .selected-file {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .predicted-category {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resume Screening</h1>
+    <form method="post" action="/" enctype="multipart/form-data">
+        <label for="resume-upload" class="file-upload">Choose File</label>
+        <input type="file" id="resume-upload" name="resume" accept=".pdf,.doc,.docx,.txt">
+        <p class="selected-file"></p>
+        <input type="submit" value="Predict" class="file-upload">
+    </form>
+    {% if predicted_category %}
+        <div class="predicted-category">
+            Predicted Category: {{ predicted_category }}
+        </div>
+    {% endif %}
+    <script>
+        document.getElementById("resume-upload").addEventListener("change", function(event) {
+            var fileName = event.target.files[0].name;
+            document.querySelector(".selected-file").innerHTML = "Selected File: " + fileName;
+        });
+    </script>
+</body>
+</html>
